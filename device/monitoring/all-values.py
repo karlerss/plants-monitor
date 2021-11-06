@@ -5,7 +5,7 @@ try:
     from smbus2 import SMBus
 except ImportError:
     from smbus import SMBus
-from bme280 import BME280
+from device.monitoring.bme280 import BME280
 
 print("""all-values.py - Read temperature, pressure, and humidity
 

@@ -17,3 +17,9 @@ Goal: to control and monitor our plant growing setup.
 - script to report sensor readings to hub
 - API to accept commands from hub
 - webcam server
+
+### notes
+
+```
+pip install pimoroni-bme280 smbus
+```

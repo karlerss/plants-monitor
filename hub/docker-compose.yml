@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  ch_server:
+    image: yandex/clickhouse-server
+    ports:
+      - "8123:8123"
+    volumes:
+      - ch-storage:/var/lib/clickhouse
+
+  ch_client:
+    image: yandex/clickhouse-client
+    entrypoint:
+      - /bin/sleep
+    command:
+      - infinity
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3004:3000"
+    environment:
+      GF_INSTALL_PLUGINS: "vertamedia-clickhouse-datasource"
+    volumes:
+      - grafana-storage:/var/lib/grafana
+
+
+volumes:
+  grafana-storage:
+  ch-storage:
