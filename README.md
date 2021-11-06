@@ -10,6 +10,7 @@ Goal: to control and monitor our plant growing setup.
 - API to proxy commands to devices, to accept sensor readings from devices
 - clickhouse - to host logs and sensor readings
 - grafana - to visualize data from clickhouse
+- wireguard to access devices behind NAT
 - nginx to glue it all together
 
 ### Device
